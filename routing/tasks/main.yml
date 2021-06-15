@@ -11,6 +11,6 @@
     #   debug:
     #     msg: "The hostname is {{ ansible_net_hostname }} and the IOS is {{ ansible_net_version }}"
         
-  eregister: output
+  register: output
 - name: SHOW DEBUG
   debug: var=output.stdout_lines
