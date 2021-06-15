@@ -5,7 +5,7 @@
     commands:
     - show clock
     - show ip ospf nei
-    - show ip route | section ospf
+    - show ip route | sect ospf
 
     # - name: Display the config
     #   debug:
