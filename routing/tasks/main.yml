@@ -4,7 +4,7 @@
   cisco.ios.ios_command:
     commands:
     - show version
-    - show interfaces
+    - show interface
 # - name: SHOW IP INTERFACES
 #   cisco.ios.ios_command:
 #     commands:
