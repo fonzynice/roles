@@ -1,9 +1,5 @@
 # tasks
 ---
-- name: Get config for IOS devices
-  cisco.ios.ios_facts:
-    gather_subset: all
-
 - name: SHOW IP INTERFACES
   cisco.ios.ios_command:
     commands:
