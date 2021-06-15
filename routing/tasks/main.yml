@@ -1,16 +1,21 @@
 # tasks
 ---
-- name: SHOW IP INTERFACES
+- name: run multiple commands on remote nodes
   cisco.ios.ios_command:
     commands:
-    - show clock
-    - show ip ospf nei
-    - show ip route | sect ospf
+    - show version
+    - show interfaces
+# - name: SHOW IP INTERFACES
+#   cisco.ios.ios_command:
+#     commands:
+#     - show clock
+#     - show ip ospf nei
+#     - show ip route | sect ospf
 
-    # - name: Display the config
-    #   debug:
-    #     msg: "The hostname is {{ ansible_net_hostname }} and the IOS is {{ ansible_net_version }}"
+#     # - name: Display the config
+#     #   debug:
+#     #     msg: "The hostname is {{ ansible_net_hostname }} and the IOS is {{ ansible_net_version }}"
         
-  register: output
-- name: SHOW DEBUG
-  debug: var=output.stdout_lines
+#   register: output
+# - name: SHOW DEBUG
+#   debug: var=output.stdout_lines
