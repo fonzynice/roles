@@ -1,1 +1,20 @@
+# tasks
+---
+- name: Get config for IOS devices
+  cisco.ios.ios_facts:
+    gather_subset: all
 
+- name: SHOW IP INTERFACES
+  cisco.ios.ios_command:
+    commands:
+    - show clock
+    - show ip ospf nei
+    - show ip route | sec ospf
+
+    # - name: Display the config
+    #   debug:
+    #     msg: "The hostname is {{ ansible_net_hostname }} and the IOS is {{ ansible_net_version }}"
+        
+  eregister: output
+- name: SHOW DEBUG
+  debug: var=output.stdout_lines
