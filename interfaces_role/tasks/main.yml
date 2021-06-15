@@ -1,1 +1,10 @@
+# tasks
+---
+- name: SHOW COMMANDS
+  cisco.ios.ios_command:
+    commands:
+    - show ip int brief
 
+ register: output
+- name: SHOW DEBUG
+  debug: var=output.stdout_lines
