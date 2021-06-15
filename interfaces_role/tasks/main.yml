@@ -5,6 +5,6 @@
     commands:
     - show ip int brief
 
- register: output
+  register: out
 - name: SHOW DEBUG
-  debug: var=output.stdout_lines
+  debug: var=out.stdout_lines
